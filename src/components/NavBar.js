@@ -1,9 +1,10 @@
 import NavBarItem from './NavBarItem';
+import './NavBar.css';
 
 
 export default function NavBar () {
   return (
-    <nav>
+    <nav className='navbar'>
       nav
       <NavBarItem name='home'/>
       <NavBarItem name='about'/>
