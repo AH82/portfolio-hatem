@@ -1,14 +1,17 @@
 .nav-btn {
+  text-decoration: none;
   background-color: inherit;
   color: inherit;
+  /* color: #08fdd8; */
   font-size: xx-small;
   text-transform: uppercase ;
   
-  width: 100%;
+  width: 95%;
   /* height: 50px; */
   text-align: center;
   padding: 40% 0 40%;
   border-color: #08fdd8;
+  border: 1.5px solid #08fdd8;
 }
 
 .nav-btn:hover {
