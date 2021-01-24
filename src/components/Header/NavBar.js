@@ -11,7 +11,7 @@ export default function NavBar () {
       <NavBarItem tabTitle='about' route='/about'/>
       <NavBarItem tabTitle='skills' route='/skills'/>
       <NavBarItem tabTitle='my work' route='/portfolio'/>
-      <NavBarItem tabTitle='contact' route='/contact'/>
+      <NavBarItem tabTitle='contacts' route='/contacts'/>
     </nav>
   )
 }

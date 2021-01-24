@@ -7,7 +7,7 @@ import Header from './components/Header/index';
 import Home   from './components/Home';
 import About  from './components/About';
 import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+import Contacts from "./components/Contacts";
 import Portfolio from "./components/Portfolio";
 /* css */
 import './App.css';
@@ -25,8 +25,8 @@ export default function App() {
         <Switch>
           <Route path='/about'      exact component={About} />
           <Route path='/Skills'     exact component={Skills} />
-          <Route path='/Contact'    exact component={Contact} />
           <Route path='/Portfolio'  exact component={Portfolio} />
+          <Route path='/Contacts'    exact component={Contacts} />
           <Route path='/'           exact component={Home} />
         </Switch>
 
