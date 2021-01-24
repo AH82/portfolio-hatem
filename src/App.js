@@ -4,11 +4,11 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 /* components */
 import Header from './components/Header/index';
-import Home   from './components/Home';
-import About  from './components/About';
-import Skills from "./components/Skills";
-import Contacts from "./components/Contacts";
-import Portfolio from "./components/Portfolio";
+import Home   from './components/Home/index';
+import About  from './components/About/index';
+import Skills from "./components/Skills/index";
+import Contacts from "./components/Contacts/index";
+import Portfolio from "./components/Portfolio/index";
 /* css */
 import './App.css';
 
