@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import './NavBarItem.css';
 
@@ -6,8 +6,8 @@ import './NavBarItem.css';
 export default function NavBarItem (props) {
   const { tabTitle, route } = props;
   return (
-    <Link to={route} className='nav-btn'>
+    <NavLink to={route} exact className='nav-btn' activeClassName='nav-btn-current'>
         {tabTitle}
-    </Link>
+    </NavLink>
   )
 };
