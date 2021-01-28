@@ -5,7 +5,17 @@
   min-height: 100vh;
   background-color: #282c34;
   background-color: #222;
+  background-color: #1d1d1d;
+  color: #08fdd8;
+  
+}
 
+.App h1 {
+  color: #08fdd8;
+}
+
+.App p {
+  color: antiquewhite;
 }
 
 .App-logo {
