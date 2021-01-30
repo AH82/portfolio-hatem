@@ -22,6 +22,7 @@ export default function App() {
 
   const   {
     locale,
+    socialMedia,
     home,
     about,
     education,
@@ -37,7 +38,7 @@ export default function App() {
 
       <BrowserRouter>
 
-        <Header locale={locale}/>
+        <Header locale={locale} socialMedia={socialMedia}/>
 
         <Switch>
           <Route exact path='/about' 
