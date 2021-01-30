@@ -1,9 +1,19 @@
-import React from 'react'
+import React from 'react';
+import ProjectsList from './ProjectsList'
+
+import './Portfolio.css';
+
+import projectsData from '../../db/projectsData.json'
+
 
 export default function Portfolio() {
+  console.log(`portfolio component : projectsData`)
+  console.log(projectsData)
   return (
-    <div style={{color: 'white'}}>
+    <section className='portfolio' >
       portfolio / my work
-    </div>
+      <ProjectsList projectsData={projectsData} />
+
+    </section>
   )
 }
