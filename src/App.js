@@ -11,10 +11,16 @@ import About  from './components/About/index';
 import Skills from "./components/Skills/index";
 import Contacts from "./components/Contacts/index";
 import Portfolio from "./components/Portfolio/index";
-
+/* hooks */
+import useAppData from './hooks/useAppData'
 
 
 export default function App() {
+
+  const { dataState } = useAppData();
+  const { about } = dataState;
+  console.log(dataState)
+
   return (
     <div className="App">
 
@@ -24,7 +30,7 @@ export default function App() {
 
         <Switch>
           <Route exact path='/about' 
-          render={(props) => <About {...props}/>} />
+          render={(props) => <About {...props} about={about}/>} />
           <Route exact path='/Skills' 
           render={(props) => <Skills {...props}/>} />
           <Route exact path='/Portfolio' 
