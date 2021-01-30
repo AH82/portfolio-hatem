@@ -29,10 +29,10 @@ export default function ProjectsListItem(props) {
       <StackList stack={stack}/>
       <p>{description}</p>
       <footer>
-        <a href={repo_url} target='_blank'>
+        <a href={repo_url} target='_blank' rel='noreferrer'>
           code
         </a>
-        <a href={website_url} target='_blank'>
+        <a href={website_url} target='_blank' rel='noreferrer'>
           site
         </a>
       </footer>
