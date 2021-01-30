@@ -1,9 +1,10 @@
 import React from 'react';
 
-export default function About() {
+export default function About(props) {
+  const { about } = props;
   return (
-    <div style={{color: 'white'}}>
-      I'm all about the about!
-    </div>
+    <section style={{color: 'white'}}>
+      {about.map( (elem) => <p>{elem}</p> ) }
+    </section>
   )
 }
