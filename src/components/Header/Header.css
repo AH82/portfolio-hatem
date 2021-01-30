@@ -19,3 +19,24 @@
   /* min-height: 500px; */
 
 }
+
+.social-media {
+  /* height: 40%;
+  width: 98%; */
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: inherit;
+  /* border: 1px solid lightgray; */
+  
+  
+  margin: 0 0 100% 0;
+}
+
+.social-media * {
+  color: inherit;
+  padding: 5px;
+  text-decoration: none;
+  text-align: center;
+}
