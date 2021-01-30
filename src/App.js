@@ -16,29 +16,40 @@ import useAppData from './hooks/useAppData'
 
 
 export default function App() {
-
+  
   const { dataState } = useAppData();
-  const { about } = dataState;
   console.log(dataState)
+
+  const   {
+    locale,
+    home,
+    about,
+    education,
+    employment,
+    skills,
+    skillSet,
+    projectsData,
+    contacts
+  } = dataState;
 
   return (
     <div className="App">
 
       <BrowserRouter>
 
-        <Header/>
+        <Header locale={locale}/>
 
         <Switch>
           <Route exact path='/about' 
-          render={(props) => <About {...props} about={about}/>} />
+          render={(props) => <About {...props} about={about} education={education} employment={employment}/>} />
           <Route exact path='/Skills' 
-          render={(props) => <Skills {...props}/>} />
+          render={(props) => <Skills {...props} skills={skills} skillSet={skillSet}  />} />
           <Route exact path='/Portfolio' 
-          render={(props) => <Portfolio {...props}/>} />
+          render={(props) => <Portfolio {...props} projectsData={projectsData}/>} />
           <Route exact path='/Contacts' 
-          render={(props) => <Contacts {...props}/>} />
+          render={(props) => <Contacts {...props} contacts={contacts} /> } />
           <Route exact path='/' 
-          render={(props) => <Home {...props}/>} />
+          render={(props) => <Home {...props} home={home} />} />
         </Switch>
 
       </BrowserRouter>
