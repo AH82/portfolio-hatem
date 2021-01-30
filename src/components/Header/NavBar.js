@@ -4,7 +4,7 @@ import NavBarItem from './NavBarItem';
 import './NavBar.css';
 
 
-export default function NavBar () {
+export default function NavBar (props) {
   return (
     <nav className='navbar'>
       <NavBarItem tabTitle='home' route='/'/>
