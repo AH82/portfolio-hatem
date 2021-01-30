@@ -1,4 +1,6 @@
 // import logo from './logo.svg';
+/* css */
+import './App.css';
 
 /* libraries */
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -9,8 +11,6 @@ import About  from './components/About/index';
 import Skills from "./components/Skills/index";
 import Contacts from "./components/Contacts/index";
 import Portfolio from "./components/Portfolio/index";
-/* css */
-import './App.css';
 
 
 
@@ -23,11 +23,16 @@ export default function App() {
         <Header/>
 
         <Switch>
-          <Route path='/about'      exact component={About} />
-          <Route path='/Skills'     exact component={Skills} />
-          <Route path='/Portfolio'  exact component={Portfolio} />
-          <Route path='/Contacts'    exact component={Contacts} />
-          <Route path='/'           exact component={Home} />
+          <Route exact path='/about' 
+          render={(props) => <About {...props}/>} />
+          <Route exact path='/Skills' 
+          render={(props) => <Skills {...props}/>} />
+          <Route exact path='/Portfolio' 
+          render={(props) => <Portfolio {...props}/>} />
+          <Route exact path='/Contacts' 
+          render={(props) => <Contacts {...props}/>} />
+          <Route exact path='/' 
+          render={(props) => <Home {...props}/>} />
         </Switch>
 
       </BrowserRouter>
