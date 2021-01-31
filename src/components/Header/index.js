@@ -5,11 +5,14 @@ import NavBar from './NavBar';
 import SocialMediaList from './SocialMediaList';
 
 export default function Header (props) {
+  
+  const { locale, socialMedia } = props;
+
   return (
     <header className='folio-header'>
       <Logo/>
-      <NavBar/>
-      <SocialMediaList/>
+      <NavBar locale={locale} />
+      <SocialMediaList socialMedia={socialMedia} />
     </header>
   )
 };
