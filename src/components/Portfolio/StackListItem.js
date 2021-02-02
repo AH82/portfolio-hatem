@@ -1,18 +1,14 @@
 import React from 'react';
-
-import stackLogo from '../../logo.svg';
-
-
+import { iconSelector } from "../../helpers/iconSelector";
 
 
 export default function StackListItem(props) {
 
   const { name, path } = props;
-  // todo: change logo to path
   
   return (
-    <div>
-      <img src={stackLogo} alt={name} />
+    <div className="stack-item">
+      {iconSelector(name)}
     </div>
   )
 }
