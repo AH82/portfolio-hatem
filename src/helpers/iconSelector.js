@@ -1,4 +1,9 @@
+/* custom made icons/SVG : */
+import { ExpressSVG } from "../stack-svg/ExpressSVG";
+
 /**
+ * react icon livrary : 
+ * 
  * to select desired icons to import : 
  * https://react-icons.github.io/react-icons
  */
@@ -46,7 +51,7 @@ import {
 
 
   export function iconSelector (icon) {
-    
+
     switch (icon.toLowerCase()) {
       // social icons
       case 'linkedin': return <FaLinkedinIn/>;
@@ -65,14 +70,24 @@ import {
 
       // tech stack
       case 'html': return <TiHtml5/>;
+      case 'vanilla css' :
       case 'css': return <SiCss3/>;
       case 'sass': return <FaSass/>;
       case 'bootstrap': return <SiBootstrap/>;
-      case 'materialize': return <DiMaterializecss/>
-      case 'materialui': return <SiMaterialUi/>
+      case 'materialize' : 
+      case 'materializecss' : 
+      case 'materialize css' : 
+      case 'materialize-css' : return <DiMaterializecss/>;
+      case 'materialui': return <SiMaterialUi/>;
 
-      case 'js': return <SiJavascript/>;
-      case 'nodejs': return <SiNodeDotJs/>;
+      case 'js' : 
+      case 'javascript' : return <SiJavascript/>;
+      case 'nodejs':
+      case 'node js':
+      case 'node-js':
+      case 'node': return <SiNodeDotJs/>;
+      case 'express': return <ExpressSVG/>;
+      // case 'express': return "ex";
       // case 'express': return </>;
 
       case 'jquery': return <SiJquery/>;
@@ -86,7 +101,9 @@ import {
       // case '': return </>;
 
       case 'ruby': return <DiRuby/>;
-      case 'rails': return <SiRails/>;
+      case 'rails' :
+      case 'ruby on rails' : 
+      case 'ruby on rails MVC' : return <SiRails/>;
       
       // case '': return </>;
       default: return <BiCodeCurly/>
