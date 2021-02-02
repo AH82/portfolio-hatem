@@ -3,6 +3,8 @@
 */
 
 import React from 'react';
+import { DiCode } from "react-icons/di";
+import { GoLinkExternal } from "react-icons/go";
 
 
 import ProjectTitle from "./ProjectTitle";
@@ -13,27 +15,35 @@ export default function ProjectsListItem(props) {
   const { 
     title, subTitle, stack, website_url, img_url, repo_url, description 
   } = props.projectData;
-  const defaultImg = "https://upload.wikimedia.org/wikipedia/commons/9/98/Microsoft_Project_%282019%E2%80%93present%29.svg";
   
   let cardView = true;
 
+
   return (
     <div className={ cardView ? 'card' : null } >
-      <ProjectTitle title={title} subTitle={subTitle} />
+      
       <img 
-        src={img_url? img_url : defaultImg} 
+        src={img_url[0] ? img_url[0] : "images/project-screenshots/no-image-available-icon.png"} 
         alt="Project_Screenshot"
       />
+
+      {/* <ProjectTitle title={title} subTitle={subTitle} /> */}
+      <h1>{title}</h1>
       <hr/>
-      stack
-      <StackList stack={stack}/>
-      <p>{description}</p>
+
+      <p className='description'>{description}</p>
+
+
+
       <footer>
         <a href={repo_url} target='_blank' rel='noreferrer'>
-          code
+          <DiCode/>
         </a>
+        
+        <StackList stack={stack}/>
+        
         <a href={website_url} target='_blank' rel='noreferrer'>
-          site
+          <GoLinkExternal/>
         </a>
       </footer>
     </div>
