@@ -45,14 +45,31 @@ import {
   SiUbuntu
   } from "react-icons/si";
 
+  import { BsPersonBoundingBox } from "react-icons/bs";
+  import { GoHome } from 'react-icons/go'
+
   import { TiHtml5 } from "react-icons/ti";
   import { FcLinux } from "react-icons/fc";
-  import { BiCodeCurly } from "react-icons/bi";
+  import { BiCodeCurly, BiEnvelope } from "react-icons/bi";
+  import { IoFingerPrintOutline } from "react-icons/io5";
+  import { GiBrain } from "react-icons/gi";
 
 
   export function iconSelector (icon) {
 
     switch (icon.toLowerCase()) {
+      // Navigation
+      case 'home': return <GoHome/>;
+      case 'about': return <BsPersonBoundingBox/>;
+      case 'skill': 
+      case 'skills': return <GiBrain/>;
+      case 'my work': 
+      case 'work': 
+      case 'projects': 
+      case 'portfolio': return <IoFingerPrintOutline/>;
+      case 'contact': 
+      case 'contacts': return <BiEnvelope/>;
+
       // social icons
       case 'linkedin': return <FaLinkedinIn/>;
       case 'github': return <FaGithub/>;
