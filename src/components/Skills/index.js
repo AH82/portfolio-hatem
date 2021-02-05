@@ -1,9 +1,33 @@
-import React from 'react'
+import React from 'react';
 
-export default function Skills() {
+export default function Skills(props) {
+  
+  const { skills } = props;
+  const lang = "en"; // hardcoded for now, should come from props later.
+
+  // verfies data in selected language, else defaults to English.
+  const verifyLocale = function (langsContainer, lang) {
+    // if empty array
+    if (Array.isArray(langsContainer[lang]) && !langsContainer[lang].length) {
+      return "en";
+    } else {
+      // if empty string
+      return langsContainer[lang] ? lang : "en";
+    }
+  };
+
+  const locale = verifyLocale(skills, lang)
+  
   return (
-    <div style={{color: 'white'}}>
-      Skillsss!
+    <div className='main-page'>
+      <h1>
+        {"Skills & Competence"}
+      </h1>
+      {
+        skills[locale].map( (elem, index) => (
+          <p key={index} >{elem}</p>
+        ))
+      }
     </div>
   )
 }
