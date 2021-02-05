@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function Contacts() {
+export default function Contacts(props) {
   return (
-    <div style={{color: 'white'}}>
-      Contacts
+    <div className='main-page'>
+      <h1>
+        Contacts
+      </h1>
     </div>
   )
 }
