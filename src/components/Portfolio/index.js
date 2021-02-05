@@ -10,7 +10,7 @@ export default function Portfolio() {
   console.log(`portfolio component : projectsData`)
   console.log(projectsData)
   return (
-    <section className='portfolio' >
+    <section className='main-page portfolio' >
       portfolio / my work
       <ProjectsList projectsData={projectsData} />
 
