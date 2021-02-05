@@ -1,18 +1,18 @@
 import React from 'react';
 
 const title = [
-  `Bonjour/Hi,`,
-  `I'm Hatem,`,
-  `full stack web developer.`
+  `Bonjour, Hi!,`,
+  `I am Hatem,`,
+  `A Full-Stack Web-Developer.`
 ]
 const subTitle = `
-junior, fresh, entry-level.
+Junior, Fresh, Entry-Level.
 `;
 
-export default function Home() {
+export default function Home(props) {
   return (
 
-    <div >
+    <div className='main-page home' >
       <h1>
     {title.map(sentence => <>{sentence} <br/></>)}
     </h1>
