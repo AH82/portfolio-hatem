@@ -1,16 +1,25 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   align-items: stretch;
   min-height: 100vh;
   background-color: #282c34;
   background-color: #222;
   background-color: #1d1d1d;
-  color: #08fdd8;
+  /* color: #08fdd8; */
+  
+}
+.main-page {
   
 }
 
+.main-page.home {
+  text-align: center;
+  width: 100vw;
+
+}
 .App h1 {
+  width: 100%;
   color: #08fdd8;
 }
 
