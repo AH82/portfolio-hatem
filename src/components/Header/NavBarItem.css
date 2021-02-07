@@ -15,7 +15,7 @@
 }
 
 .nav-btn-current {
-  border: 6px solid #08fdd8;
+  border-right: 6px solid #08fdd8;
   
 }
 
@@ -23,4 +23,9 @@
   background-color: #08fdd8;
   color: #181818;
 
+}
+.nav-btn svg[style]  {
+  fill: #08fdd8;
+  color: #08fdd8;
+  /* background-color: lawngreen; */
 }
