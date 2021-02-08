@@ -25,7 +25,7 @@ export default function LanguageSelector(props) {
   return (
     // <div onClick={ () => changeLanguage(!lang)}>
     <div onClick={handleClick}>
-      {languageDisplay }
+      {iconSelector(languageDisplay)} {languageDisplay.toUpperCase() }
     </div>
   )
 
