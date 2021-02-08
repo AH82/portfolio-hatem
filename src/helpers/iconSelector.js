@@ -1,5 +1,8 @@
 /* custom made icons/SVG : */
 import { ExpressSVG } from "../stack-svg/ExpressSVG";
+import MapleLeaf_svg from '../stack-svg/MapleLeaf_svg';
+import FleurDeLys_svg from "../stack-svg/FleurDeLys_svg";
+
 
 /**
  * react icon livrary : 
@@ -58,6 +61,10 @@ import {
   export function iconSelector (icon) {
 
     switch (icon.toLowerCase()) {
+      // Language
+      case 'en': return <MapleLeaf_svg/>;
+      case 'fr': return <FleurDeLys_svg/>;
+
       // Navigation
       case 'home': return <GoHome/>;
       case 'about': return <BsPersonBoundingBox/>;
