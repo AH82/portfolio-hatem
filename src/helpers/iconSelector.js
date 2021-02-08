@@ -15,7 +15,8 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaGitAlt,
-  FaSass
+  FaSass,
+  FaCanadianMapleLeaf
 } from "react-icons/fa";
 
 import { 
@@ -55,15 +56,17 @@ import {
   import { FcLinux } from "react-icons/fc";
   import { BiCodeCurly, BiEnvelope } from "react-icons/bi";
   import { IoFingerPrintOutline } from "react-icons/io5";
-  import { GiBrain } from "react-icons/gi";
+  import { GiBrain, GiFleurDeLys } from "react-icons/gi";
 
 
   export function iconSelector (icon) {
 
     switch (icon.toLowerCase()) {
       // Language
-      case 'en': return <MapleLeaf_svg/>;
-      case 'fr': return <FleurDeLys_svg/>;
+      case 'en': return <FaCanadianMapleLeaf/>;
+      // case 'en': return <MapleLeaf_svg/>;
+      case 'fr': return <GiFleurDeLys/>;
+      // case 'fr': return <FleurDeLys_svg/>;
 
       // Navigation
       case 'home': return <GoHome/>;
