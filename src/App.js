@@ -17,7 +17,7 @@ import useAppData from './hooks/useAppData'
 
 export default function App() {
   
-  const { dataState } = useAppData();
+  const { dataState, currentLanguage, changeLanguage } = useAppData();
   console.log(dataState)
 
   const   {
@@ -38,19 +38,19 @@ export default function App() {
 
       <BrowserRouter>
 
-        <Header locale={locale} socialMedia={socialMedia}/>
+        <Header locale={locale} socialMedia={socialMedia} changeLanguage={changeLanguage} lang={currentLanguage}/>
 
         <Switch>
-          <Route exact path='/about' 
-          render={(props) => <About {...props} about={about} education={education} employment={employment}/>} />
+          <Route exact path={`/about`} 
+            render={(props) => <About {...props} lang={currentLanguage} about={about} education={education} employment={employment}/>} />
           <Route exact path='/Skills' 
-          render={(props) => <Skills {...props} skills={skills} skillSet={skillSet}  />} />
+            render={(props) => <Skills {...props} lang={currentLanguage} skills={skills} skillSet={skillSet}  />} />
           <Route exact path='/Portfolio' 
-          render={(props) => <Portfolio {...props} projectsData={projectsData}/>} />
+            render={(props) => <Portfolio {...props} lang={currentLanguage} projectsData={projectsData}/>} />
           <Route exact path='/Contacts' 
-          render={(props) => <Contacts {...props} contacts={contacts} /> } />
+            render={(props) => <Contacts {...props} lang={currentLanguage} contacts={contacts} /> } />
           <Route exact path='/' 
-          render={(props) => <Home {...props} home={home} />} />
+            render={(props) => <Home {...props} lang={currentLanguage} home={home} />} />
         </Switch>
 
       </BrowserRouter>
