@@ -5,6 +5,8 @@ import './NavBar.css';
 
 
 export default function NavBar (props) {
+  const { locale, lang } = props;
+  
   return (
     <nav className='navbar'>
       <NavBarItem tabTitle='home' route='/'/>

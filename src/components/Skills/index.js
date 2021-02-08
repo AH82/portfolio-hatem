@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Skills(props) {
   
-  const { skills } = props;
-  const lang = "en"; // hardcoded for now, should come from props later.
+  const { skills, lang } = props;
+  // const lang = "en"; // hardcoded for now, should come from props later.
 
   // verfies data in selected language, else defaults to English.
   const verifyLocale = function (langsContainer, lang) {
