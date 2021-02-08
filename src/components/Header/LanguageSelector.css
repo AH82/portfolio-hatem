@@ -1,0 +1,25 @@
+.lang-box {
+ 
+  
+}
+
+.lang-btn-wrapper {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
+.lang-btn {
+  /* height: 45px;
+  width: 45px; */
+  background-color: rgb(0, 0, 0, 0.8);
+  margin: auto;
+  text-align: center;
+  /* flood-opacity: 0.5; */
+
+}
+
+.lang-btn:hover {
+  background-color: lightgreen;
+}
+
