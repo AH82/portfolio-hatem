@@ -1,25 +1,22 @@
 .lang-box {
- 
-  
-}
-
-.lang-btn-wrapper {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-}
-
-.lang-btn {
-  /* height: 45px;
-  width: 45px; */
-  background-color: rgb(0, 0, 0, 0.8);
-  margin: auto;
+  height: 40px;
+  width: 40px;
   text-align: center;
-  /* flood-opacity: 0.5; */
-
+  color: blanchedalmond;
+  border: none;
+  border-radius: 15px;
+  border: 1.5px solid whitesmoke;
+  outline:none;
 }
 
-.lang-btn:hover {
-  background-color: lightgreen;
+.lang-box:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
+.lang-box.en {
+  background-color: red;
+}
+
+.lang-box.fr {
+  background-color: darkblue;
+}
