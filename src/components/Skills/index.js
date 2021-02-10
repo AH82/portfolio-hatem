@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Skills(props) {
   
-  const { skills, lang } = props;
+  const { skills, localePageHeadings, lang } = props;
   // const lang = "en"; // hardcoded for now, should come from props later.
 
   // verfies data in selected language, else defaults to English.
@@ -21,7 +21,7 @@ export default function Skills(props) {
   return (
     <div className='main-page'>
       <h1>
-        {"Skills & Competence"}
+        {localePageHeadings[lang].skills}
       </h1>
       {
         skills[locale].map( (elem, index) => (

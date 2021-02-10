@@ -5,15 +5,14 @@ import './NavBar.css';
 
 
 export default function NavBar (props) {
-  const { locale, lang } = props;
   
   return (
     <nav className='navbar'>
-      <NavBarItem tabTitle='home' route='/'/>
-      <NavBarItem tabTitle='about' route='/about'/>
-      <NavBarItem tabTitle='skills' route='/skills'/>
-      <NavBarItem tabTitle='my work' route='/portfolio'/>
-      <NavBarItem tabTitle='contacts' route='/contacts'/>
+      <NavBarItem {...props} tabKey={'home'} route='/'/>
+      <NavBarItem {...props} tabKey={'about'} route='/about'/>
+      <NavBarItem {...props} tabKey={'skills'} route='/skills'/>
+      <NavBarItem {...props} tabKey={'work'} route='/portfolio'/>
+      <NavBarItem {...props} tabKey={'contact'} route='/contacts'/>
     </nav>
   )
 }

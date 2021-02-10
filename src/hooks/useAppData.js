@@ -1,10 +1,13 @@
+/* Pages' Data & socialMedia are (.gitignored) */
+
 import { useState } from 'react';
 
-/* data (.gitignored) */
-// Headers
+// Header items: Nav, Headings & Social Media
 import locale from '../db/locale.json';
-import socialMedia from '../db/socialMedia.json'
-// pages
+import localeNavBtns from '../locale/localeNavBtns.json';
+import localePageHeadings from '../locale/localePageHeadings.json';
+import socialMedia from '../db/socialMedia.json'; // gitignored
+// Page Data
 import home from '../db/home.json';
 import about from '../db/about.json';
 import education from '../db//education.json';
@@ -12,7 +15,7 @@ import employment from '../db/employment.json';
 import skills from '../db/skills.json';
 import skillSet from '../db/skillSet.json';
 import projectsData from "../db/projectsData.json";
-import contacts from '../db/contacts.json'
+import contacts from '../db/contacts.json';
 
 
 
@@ -24,20 +27,23 @@ export default function useAppData(initial) {
 
   const [ dataState, setDataState ] = useState(
     {
-      locale,
+      // Header items: Nav, Headings & Social Media
+      localeNavBtns,
+      localePageHeadings,
       socialMedia,
+
+      // Page Data
       home,
       about,
-      // about: about[currentLanguage],
       education,
       employment,
       skills,
-      // skills: skills[currentLanguage],
       skillSet,
       projectsData,
       contacts
     }
   );
+
 
   function changeLanguage(lang) {
     console.log("requested language: ", lang);

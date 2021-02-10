@@ -6,7 +6,7 @@ import './NavBarItem.css';
 
 
 export default function NavBarItem (props) {
-  const { tabTitle, route } = props;
+  const { tabKey, localeNavBtns, lang, route } = props;
   const [isHovering, setIsHovering] = useState(false);
 
   return (
@@ -16,8 +16,8 @@ export default function NavBarItem (props) {
     onMouseEnter={()=> setIsHovering(true)}
     onMouseLeave={()=> setIsHovering(false)}
     >
-    {!isHovering && iconSelector(tabTitle)}
-    {isHovering && tabTitle}
+    {!isHovering && iconSelector(tabKey)}
+    {isHovering && localeNavBtns[lang][tabKey]}
     </NavLink>
   )
 };

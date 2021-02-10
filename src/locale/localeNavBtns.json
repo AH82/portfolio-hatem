@@ -1,0 +1,28 @@
+{
+  "en": {
+    "home": "home",
+    "about": "about",
+    "skills": "skills",
+    "work": "my work",
+    "projects": "projects",
+    "contact": "contact"
+  },
+  "fr": {
+    "home": "accueil",
+    "about": "à propos",
+    "skills": "compétence/comp'ce",
+    "work": "mon travail",
+    "projects": "",
+    "contact": "contact"
+
+  },
+  "es": {
+    "home": "inicio",
+    "about": "acerca de",
+    "skills": "habilidades",
+    "work": "mi trabajo",
+    "projects": "proyectos",
+    "contact": "contacto"
+  }
+}
+  

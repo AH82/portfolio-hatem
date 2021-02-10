@@ -21,7 +21,8 @@ export default function App() {
   console.log(dataState)
 
   const   {
-    locale,
+    localeNavBtns,
+    localePageHeadings,
     socialMedia,
     home,
     about,
@@ -33,24 +34,44 @@ export default function App() {
     contacts
   } = dataState;
 
+  const locale = {
+    localePageHeadings,
+    lang: currentLanguage
+  };
+
   return (
     <div className="App">
 
       <BrowserRouter>
 
-        <Header locale={locale} socialMedia={socialMedia} changeLanguage={changeLanguage} lang={currentLanguage}/>
+        <Header       
+        localeNavBtns={localeNavBtns}
+        socialMedia={socialMedia} 
+        changeLanguage={changeLanguage} 
+        lang={currentLanguage}
+        />
 
         <Switch>
+          
           <Route exact path={`/about`} 
-            render={(props) => <About {...props} lang={currentLanguage} about={about} education={education} employment={employment}/>} />
+            render={(props) => <About {...props} {...locale} 
+            about={about} education={education} employment={employment}/>} />
+          
           <Route exact path='/Skills' 
-            render={(props) => <Skills {...props} lang={currentLanguage} skills={skills} skillSet={skillSet}  />} />
+            render={(props) => <Skills {...props} {...locale} 
+            skills={skills} skillSet={skillSet}  />} />
+          
           <Route exact path='/Portfolio' 
-            render={(props) => <Portfolio {...props} lang={currentLanguage} projectsData={projectsData}/>} />
+            render={(props) => <Portfolio {...props} {...locale} 
+            projectsData={projectsData}/>} />
+          
           <Route exact path='/Contacts' 
-            render={(props) => <Contacts {...props} lang={currentLanguage} contacts={contacts} /> } />
+            render={(props) => <Contacts {...props} {...locale} 
+            contacts={contacts} /> } />
+          
           <Route exact path='/' 
-            render={(props) => <Home {...props} lang={currentLanguage} home={home} />} />
+            render={(props) => <Home {...props} {...locale} 
+            home={home} />} />
         </Switch>
 
       </BrowserRouter>
