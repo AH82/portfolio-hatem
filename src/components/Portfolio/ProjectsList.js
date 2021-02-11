@@ -2,8 +2,8 @@ import React from 'react';
 import ProjectsListItem from './ProjectsListItem';
 
 export default function ProjectsList(props) {
-  console.log(`Component ProjectsList props =>`)
-  console.log(props)
+
+  const { projectsData, lang } = props;
 
   return (
     <>
@@ -11,9 +11,8 @@ export default function ProjectsList(props) {
       Projects List
       <div className='projects-list'>
         {
-          props.projectsData.map( project => (
-            <ProjectsListItem projectData={project}/>
-
+          projectsData.map( project => (
+            <ProjectsListItem lang={lang} projectData={project}/>
           ))
         }
       </div>
