@@ -13,7 +13,9 @@ import StackList from './StackList'
 
 export default function ProjectsListItem(props) {
   const { 
-    title, subTitle, stack, website_url, img_url, repo_url, description 
+    img_url, title, subTitle, 
+    stack, website_url, repo_url, 
+    description, role
   } = props.projectData;
   
   let cardView = true;
@@ -31,9 +33,8 @@ export default function ProjectsListItem(props) {
       <h1>{title}</h1>
       <hr/>
 
-      <p className='description'>{description}</p>
-
-
+      <p className='description'>{description["en"]}</p>
+      {role["en"] && <p className='description'>{role["en"]}</p>}
 
       <footer>
         <a href={repo_url} target='_blank' rel='noreferrer'>
