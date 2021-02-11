@@ -1,19 +1,19 @@
 import React from 'react';
-import ProjectsList from './ProjectsList'
+import ProjectsList from './ProjectsList';
 
 import './Portfolio.css';
 
-import projectsData from '../../db/projectsData.json'
 
+export default function Portfolio(props) {
 
-export default function Portfolio() {
-  console.log(`portfolio component : projectsData`)
-  console.log(projectsData)
+  const { projectsData, localePageHeadings, lang } = props;
+
   return (
     <section className='main-page portfolio' >
-      portfolio / my work
-      <ProjectsList projectsData={projectsData} />
-
+      <h1>
+        {localePageHeadings[lang].projects} / {localePageHeadings[lang].work} 
+      </h1>
+      <ProjectsList lang={lang} projectsData={projectsData} />
     </section>
   )
 }
