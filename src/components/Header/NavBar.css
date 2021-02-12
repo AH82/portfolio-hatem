@@ -6,3 +6,35 @@
   justify-content: space-between;
   color: inherit;
 }
+
+.nav-btn {
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  /* color: var(--color-brand); */
+  font-size: xx-small;
+  text-transform: uppercase ;
+  
+  width: 95%;
+  /* height: 50px; */
+  text-align: center;
+  padding: 40% 0 40%;
+  border-color: var(--color-brand);
+  border: 1.5px solid var(--color-brand);
+}
+
+.nav-btn-current {
+  border-right: 6px solid var(--color-brand);
+  
+}
+
+.nav-btn:hover {
+  background-color: var(--color-brand);
+  color: var(--color-nav);
+
+}
+.nav-btn svg[style]  {
+  fill: var(--color-brand);
+  color: var(--color-brand);
+  /* background-color: lawngreen; */
+}
