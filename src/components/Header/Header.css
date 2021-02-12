@@ -1,7 +1,6 @@
 .folio-header {
-  color: #03dac5; /* #08fdd8 */
-  color: #08fdd8;
-  background: #181818;
+  color: var(--color-brand);
+  background: var(--color-nav);
 
   /* width: 60px; */
   height: 100vh;
@@ -14,7 +13,7 @@
   justify-content: space-between;
   z-index: 3;
 
-  border-color: springgreen;
+  /* outline: 3px solid springgreen; */
 
   /* min-height: 500px; */
 
