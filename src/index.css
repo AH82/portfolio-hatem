@@ -3,6 +3,7 @@
   --color-brand: #08fdd8;
   --color-main: antiquewhite;
   --color-nav: #181818; 
+  --header-thickness: 60px;
 }
 
 body {
@@ -24,12 +25,12 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Martel', serif;
-  width: 100%;
+  /* width: 100%; */
   color: var(--color-brand);
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 p {
