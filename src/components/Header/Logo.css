@@ -1,4 +1,8 @@
 .logo {
   font-family: 'Pacifico', cursive;
   font-family: 'Indie Flower', cursive;
+  background-color: royalblue;
+  outline: .5px solid seagreen;
+  height: var(--header-thickness);
+  width: var(--header-thickness);
 }
