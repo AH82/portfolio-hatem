@@ -6,7 +6,13 @@
   background-color: var(--color-background);
 }
 .main-page {
-  margin: 1%;
+  /* position: relative;
+  left: var(--header-thickness); */
+  margin: 
+    var(--header-thickness) 
+    1em
+    1em
+    calc(var(--header-thickness)*1.2);
   padding: 2%;
   flex: 1;
   overflow-y: auto; 
@@ -19,8 +25,18 @@
 .main-page.home {
   text-align: center;
   width: 100vw;
-
 }
+
+@media only screen and (max-width: 425px) {
+  .main-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-page p {
+    font-size: .8rem;
+  }
+}
+
 /* .App h1 {
   width: 100%;
   color: #08fdd8;
