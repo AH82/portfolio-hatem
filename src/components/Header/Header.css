@@ -4,8 +4,8 @@
 
   /* width: 60px; */
   height: 100vh;
-  /* position: fixed; */
-  max-width: 50px;
+  position: fixed;
+  width: var(--header-thickness);
   top: 0;
   flex: 33%;
   display: flex;
@@ -20,8 +20,8 @@
 }
 
 .social-media {
-  /* height: 40%;
-  width: 98%; */
+  /* height: 40%; */
+  /* width: 98%; */
   font-size: 1.5em;
   display: flex;
   flex-direction: column;
@@ -32,10 +32,17 @@
   
   margin: 0 0 100% 0;
 }
+@media only screen and (max-height: 420px) and (orientation: landscape) {
+.social-media {
+  margin: 0 0 0 0;
+  }
+}
 
 .social-media * {
   color: inherit;
-  padding: 5px;
+  /* padding: 5px; */
+  padding: 1px;
   text-decoration: none;
   text-align: center;
+  height: 50%
 }
