@@ -13,6 +13,9 @@ export default function NavBarItem (props) {
     activeClassName='nav-btn-current'
     onMouseEnter={()=> setIsHovering(true)}
     onMouseLeave={()=> setIsHovering(false)}
+    onClick={ () => setTimeout(() => {
+      setIsHovering(false)
+    }, 2000) }
     >
     {!isHovering && iconSelector(tabKey)}
     {isHovering && localeNavBtns[lang][tabKey]}
