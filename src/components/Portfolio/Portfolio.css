@@ -20,31 +20,41 @@
 /* Card View */
 .card {
   border-radius: 10px;
-  background-color: gainsboro;
+  background-color: teal;
   border: 3px solid darkgray ;
   box-shadow: 
-    0 4px 8px 0 rgba(255, 255, 255, 0.8), 
-    0 6px 20px 0 rgba(255, 255, 255, 0.81);
+    0 4px 20px 0, 
+    0 6px 20px 0;
   margin: 20px;
   padding: 2px;
   /* width: 10%; */
   width: 300px;
-  font-size: 1rem ;
+  font-size: 0.75rem ;
   color: black;
   /* flex: 10%; */
 }
 
+.card:hover {
+  box-shadow:  
+  4px 4px 8px 0 rgba(0, 255, 0, 0.2), 
+  0 6px 20px 0 rgba(0, 255, 0, 0.19);
+}
+
 .card h1 {
-  color: black;
+  color: lime;
   font: small-caps 1rem vernada ;
+  text-align: center;
 }
 
 .card > img {
   object-fit: contain;
+  margin-top: 1%;
   width: 100%;
   height: 33%;
   max-height: 160px;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  box-shadow: 
+    0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
@@ -55,13 +65,14 @@
 
 .card > .description {
   height: 100px;
-  color: black;
-  color: black;
-  font-size: 0.01 em;
+  color: lightgrey;
+  font-size: 1em;
+  margin: 4%;
+  text-align: center;
 }
 
 .stack-list {
-  color: black;
+  /* color: black; */
   font-size: 1rem;
   /* font-variant: small-caps; */
   padding: 1%; 
@@ -71,14 +82,15 @@
 }
 
 .stack-list * {
-  color:greenyellow;
-  fill: crimson;
+  /* color:greenyellow; */
+  fill: ivory;
   /* background-color: blue; */
   /* font-size: 1rem; */
   /* height: 100%; */
+  margin: 0 2% 0 2%;
 }
 
-svg {
+.card svg {
   height:"32px" !important;
   width: "32px"!important;
 }
@@ -87,9 +99,31 @@ svg {
   display: flex;
   justify-content: space-between;
   height: 10%;
-  font-size: 2rem;
+  /* font-size: 2rem;  */ /* <-- this is the one making the external link icon oversized*/
   align-self: flex-end;
   flex-shrink: 0 ;
+  fill: ivory;
+  margin: 1%;
+  padding: 1%;
   
 }
 
+.card a:link {
+  text-decoration: none;
+  color: lime;
+}
+
+.card a:visited {
+  text-decoration: none;
+  color: lime;
+}
+
+.card a:hover {
+  text-decoration: underline;
+  background-color: darkgreen;
+  border-radius: 3px;
+}
+
+.card a:active {
+  text-decoration: underline;
+}
