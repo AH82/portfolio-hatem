@@ -3,12 +3,17 @@
 */
 
 import React from 'react';
+import { IconContext } from "react-icons";
 import { DiCode } from "react-icons/di";
+import { FaRegFileCode } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
+import { HiExternalLink } from "react-icons/hi";
+
 
 
 import ProjectTitle from "./ProjectTitle";
 import StackList from './StackList'
+import './Portfolio.css';
 
 
 export default function ProjectsListItem(props) {
@@ -22,7 +27,7 @@ export default function ProjectsListItem(props) {
 
 
   return (
-    <div className={ cardView ? 'card' : null } >
+    <div className={ cardView ? 'card' : null }  >
       
       <img 
         src={img_url[0] ? img_url[0] : "images/project-screenshots/no-image-available-icon.png"} 
@@ -33,18 +38,28 @@ export default function ProjectsListItem(props) {
       <h1>{title}</h1>
       <hr/>
 
-      <p className='description'>{description["en"]}</p>
-      {role["en"] && <p className='description'>{role["en"]}</p>}
+      <p className='description'>
+        {description["en"]}
+        <br/>
+        {role["en"] && `Role: ${role["en"]}`}
+      </p>
+      {/* {role["en"] && <p className='description'>{role["en"]}</p>} */}
 
       <footer>
         <a href={repo_url} target='_blank' rel='noreferrer'>
-          <DiCode/>
+          <IconContext.Provider 
+            value={{ 
+              style:{height: '75%',  paddingTop: '25%'},
+              className: "global-class-name" }}>
+
+            <FaRegFileCode/>
+          </IconContext.Provider>
         </a>
         
         <StackList stack={stack}/>
         
         <a href={website_url} target='_blank' rel='noreferrer'>
-          <GoLinkExternal/>
+          <HiExternalLink/>
         </a>
       </footer>
     </div>
