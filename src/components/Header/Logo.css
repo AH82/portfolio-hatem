@@ -1,8 +1,17 @@
 .logo {
-  font-family: 'Pacifico', cursive;
-  font-family: 'Indie Flower', cursive;
-  background-color: royalblue;
-  outline: .5px solid seagreen;
-  height: var(--header-thickness);
-  width: var(--header-thickness);
+  background-color: teal;
+  border-radius: 5%; 
+  /* outline: .5px solid seagreen; */
+  /* height: var(--header-thickness); */
+  /* width: var(--header-thickness); */
+  /* width: inherit; */
+  padding: 5%;
+  box-shadow: 
+    0 4px 8px 0 rgba(0, 0, 0, 0.80), 
+    0 6px 20px 0 rgba(0, 0, 0, 0.80);
+
+}
+
+.logo > svg {
+  width: auto;
 }
