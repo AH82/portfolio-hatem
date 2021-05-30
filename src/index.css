@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.5rem;
+  animation: block-translate-right 750ms ease-in-out both;
 }
 
 p {
@@ -39,6 +40,17 @@ p {
   font-weight: 400;
   font-size: 1rem;
   max-width: 700px;
+  line-height: 1.5rem;
+  /* transform: translateX(-100vw); */
+  animation: block-translate-right 750ms ease-in-out 750ms both;
+  animation: paragraph 750ms ease-in-out 750ms both;
+  
+}
+
+::selection {
+  color: #FFF714;
+  background: deeppink;
+
 }
 
 svg {
@@ -48,4 +60,26 @@ svg {
  margin: 0;
  /* color: inherit; */
  /* fill: inherit; */
+}
+
+@keyframes block-translate-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes paragraph {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
