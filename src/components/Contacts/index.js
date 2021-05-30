@@ -14,11 +14,11 @@ export default function Contacts(props) {
   };
   
   return (
-    <div className='main-page'>
-      <h1>
+    <div key={'contacts-'+lang} className='main-page'>
+      <h1 key={'contact-heading-'+lang}>
         {localePageHeadings[lang].contact}
       </h1>
-      <p>{message}</p>
+      <p key={'p'+lang}>{message}</p>
     </div>
   )
 }

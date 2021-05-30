@@ -4,11 +4,11 @@ export default function About(props) {
   const { localePageHeadings, about, lang } = props;
   
   return (
-    <div className='main-page'>
-    <h1>{localePageHeadings[lang].about}</h1>
+    <div key={'about-'+lang} className='main-page'>
+    <h1 key={'about-heading-'+lang} >{localePageHeadings[lang].about}</h1>
 
     <section>
-      {about[lang].map( (elem, index) => <p key={index}>{elem}</p> ) }
+      {about[lang].map( (elem, index) => <p key={lang+index}>{elem}</p> ) }
     </section>
     </div>
   )

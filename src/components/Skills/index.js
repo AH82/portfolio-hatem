@@ -20,12 +20,12 @@ export default function Skills(props) {
   
   return (
     <div className='main-page'>
-      <h1>
+      <h1 key={'skills-'+lang}>
         {localePageHeadings[lang].skills}
       </h1>
       {
         skills[locale].map( (elem, index) => (
-          <p key={index} >{elem}</p>
+          <p key={lang+index} >{elem}</p>
         ))
       }
     </div>
