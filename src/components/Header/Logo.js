@@ -1,4 +1,4 @@
-import HatemDeuxAllFace from './HatemDeuxAllFace_svg.js'
+import HatemDeuxAllFace from '../HatemDeuxAllFace_svg'
 import './Logo.css';
 
 export default function Logo () {
