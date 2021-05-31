@@ -1,16 +1,55 @@
 import React from 'react'
 
-export default function HatemDeuxAllFace_svg() {
+export default function HatemDeuxAllFace_svg(props) {
   let viewBox = {
     minX: 0, 
     minY: 0, 
     width: 1516, 
     height: 2188
   };
+  let width = 1516;
+  let height = 2188;
+
+  const { } = props;
+
+  const colorPalette = {
+    charcoal: '#264653',
+    persianGreen: '#2A9D8F',
+    orangeYellowCrayola: '#E9C46A',
+    sandyBrown: '#F4A261',
+    burntSienna: '#E76F51',
+  }
+
+  const colors = {
+    hatMain: '#264653', // Charcoal
+    hatOutter: '#2A9D8F', // Persion Green
+    hatOutterStroke: '#F5FBF6',
+    hatOutterStrokeGradiant: '#264653',
+
+    DeuxOutline: '#F4A261', //Sandy brown (orange)
+    hatInnerLeft: '#E76F51', // Burnt Sienna
+    hatInnerRight: '#E9C46A', //Orange yellow Crayola
+
+    nose: '#2A9D8F', // Persion Green
+    moustache: '#264653'// Charcoal
+  }
+
+  /* 
+  showGlasses
+  showLenses
+  showNose
+  showMoustache
+   */
+
   // original removed <svg> attributes 
   /*width="1516" height="2188"*/
   return (
-    <svg viewBox="0 0 1516 2188" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      height={null} width={null}
+      viewBox="0 0 1516 2188" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <g filter="url(#filter0_i)">
         <ellipse cx="758.479" cy="1212.1" rx="747.02" ry="131.995" transform="rotate(1.13096 758.479 1212.1)" fill="#2A9D8F"/>
       </g>
