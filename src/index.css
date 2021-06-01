@@ -50,6 +50,16 @@ p {
   
 }
 
+a, a:visited, a:hover, a:active {
+  color: var(--color-brand);
+  text-decoration: none;
+}
+
+a:active {
+  background-color: teal;
+  border-radius: 50%;
+}
+
 ::selection {
   color: #FFF714;
   background: deeppink;
