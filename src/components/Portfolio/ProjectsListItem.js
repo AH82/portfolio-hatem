@@ -27,7 +27,7 @@ export default function ProjectsListItem(props) {
 
 
   return (
-    <div className={ cardView ? 'card' : null }  >
+    <div className={ cardView ? 'card' : null } key={`${title}-project-div`} >
       
       <img 
         src={img_url[0] ? img_url[0] : "images/project-screenshots/no-image-available-icon.png"} 
@@ -35,10 +35,10 @@ export default function ProjectsListItem(props) {
       />
 
       {/* <ProjectTitle title={title} subTitle={subTitle} /> */}
-      <h1>{title}</h1>
+      <h1 key={`${title}-project-heading`}>{title}</h1>
       <hr/>
 
-      <p className='description'>
+      <p className='description' key={`${title}-project-description`}>
         {description["en"]}
         <br/>
         {role["en"] && `Role: ${role["en"]}`}
