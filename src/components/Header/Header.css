@@ -32,6 +32,29 @@
   
   margin: 0 0 100% 0;
 }
+
+.beta {
+  padding: 0 2px ;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: x-small;
+  color:  gold;
+  text-align: center;
+  background-color: teal;
+  border-radius: 3px;
+  margin-top: 2px;
+  animation: blink 3s ease infinite;
+}
+
+.animation-delay {
+  animation-delay: 1.5s;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
 @media only screen and (max-height: 420px) and (orientation: landscape) {
 .social-media {
   margin: 0 0 0 0;
