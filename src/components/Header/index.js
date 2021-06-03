@@ -16,7 +16,8 @@ export default function Header (props) {
 
   return (
     <header className='folio-header'>
-      <Logo/>
+      <div>
+        <Logo/>
         {true && <LogoMsg 
           message1='beta' 
           message2={
