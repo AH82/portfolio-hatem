@@ -17,35 +17,69 @@ import './Portfolio.css';
 
 
 export default function ProjectsListItem(props) {
+  const { index } = props;
+
   const { 
     img_url, title, subTitle, 
     stack, website_url, repo_url, 
     description, role
   } = props.projectData;
   
+  
+  
+  const stepJump = 500;
+  const delayFn = function (step) {
+    const delay = {
+      animationDelay: step+(150*(index+1)) + 'ms'
+    }
+    return delay
+  }
+  
   let cardView = true;
 
-
   return (
-    <div className={ cardView ? 'card' : null } key={`${title}-project-div`} >
+
+    <div 
+      className={ `${cardView ? 'card' : null} fade-in` } 
+      key={`${title}-project-div-${index}`} 
+      style={{...delayFn(stepJump)}}
+    >
       
       <img 
-        src={img_url[0] ? img_url[0] : "images/project-screenshots/no-image-available-icon.png"} 
+        src={
+          img_url[0] 
+          ? img_url[0] 
+          : "images/project-screenshots/no-image-available-icon.png"
+        } 
         alt="Project_Screenshot"
       />
 
       {/* <ProjectTitle title={title} subTitle={subTitle} /> */}
-      <h1 key={`${title}-project-heading`}>{title}</h1>
+      <h1 
+        key={`${title}-project-heading`} 
+        style={{...delayFn(stepJump*2)}}
+
+      >
+        {title}
+      </h1>
+
       <hr/>
 
-      <p className='description' key={`${title}-project-description`}>
+      <p 
+        key={`${title}-project-description`}
+        className='description'
+        style={{...delayFn(stepJump*3)}}
+
+      >
         {description["en"]}
         <br/>
         {role["en"] && `Role: ${role["en"]}`}
       </p>
       {/* {role["en"] && <p className='description'>{role["en"]}</p>} */}
 
+
       <footer>
+
         <a href={repo_url} target='_blank' rel='noreferrer'>
           <IconContext.Provider 
             value={{ 
@@ -61,7 +95,9 @@ export default function ProjectsListItem(props) {
         <a href={website_url} target='_blank' rel='noreferrer'>
           <HiExternalLink/>
         </a>
+
       </footer>
+
     </div>
   )
 }
