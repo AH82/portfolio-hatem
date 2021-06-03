@@ -19,13 +19,48 @@
   scroll-behavior: smooth;
   height: 100vh;
   height: 90vh;
-  
+  /* animation: page-change 1s ease-in-out; */
+}
+
+.col-2 {
+  display: flex;
+  justify-content: space-evenly;
+	/* align-items: baseline; */
+
 }
 
 .main-page.home {
   text-align: center;
   width: 100vw;
+  animation: page-change-home 1s ease-in-out;
 }
+
+p.tagline {
+  max-width: none;
+  font-family: 'Pacifico';
+  font-size: x-large;
+}
+
+@keyframes page-change {
+  0% {
+    transform: translate(-100vw, -10%);
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+    transform: translateX(0%);
+  }
+}
+
+@keyframes page-change-home {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+} 
+
 
 @media only screen and (max-width: 425px) {
   .main-page h1 {
