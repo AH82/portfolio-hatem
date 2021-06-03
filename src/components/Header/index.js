@@ -17,6 +17,15 @@ export default function Header (props) {
   return (
     <header className='folio-header'>
       <Logo/>
+        {true && <LogoMsg 
+          message1='beta' 
+          message2={
+            lang === 'fr' 
+            ? 'Travail en cours' 
+            : 'Work in progress'
+            }
+          />}
+      </div>
       <LanguageSelector changeLanguage={changeLanguage}/>
       <NavBar         
         localeNavBtns={localeNavBtns}
