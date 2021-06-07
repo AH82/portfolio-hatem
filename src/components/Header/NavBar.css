@@ -38,6 +38,8 @@
   /* border-right: 6px solid var(--color-brand); */
   border-radius: 12% 0 0 12%;
   background-color: var(--color-background);
+  background-color: rgba(0, 128, 128, .3);
+
   
 }
 
