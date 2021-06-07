@@ -33,17 +33,7 @@
   
 }
 
-.main-page.home {
-  text-align: center;
-  width: 100vw;
-  animation: page-change-home 1s ease-in-out;
-}
 
-p.tagline {
-  max-width: none;
-  font-family: 'Pacifico';
-  font-size: x-large;
-}
 
 @keyframes page-change {
   0% {
