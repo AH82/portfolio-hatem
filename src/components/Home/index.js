@@ -1,5 +1,7 @@
 import React, {useState, useEffect } from 'react';
-import HatemDeuxAllFace from '../HatemDeuxAllFace_svg.js'
+import HatemDeuxAllFace from '../HatemDeuxAllFace_svg.js';
+import Typewriter from 'typewriter-effect';
+import './Home.css';
 
 
 export default function Home(props) {
@@ -9,14 +11,16 @@ export default function Home(props) {
   // Data
   const homeMessage = {
     en: {
-      greeting: `Bonjour / Hi !`,
+      greeting: `Bonjour–Hi !`,
+      welcome: `Welcome to my Portfolio App!`,
       intro: `I am`,
       name: `Hatem`,
-      jobTitle: `A Full-Stack Web-Developer.`,
+      jobTitle: `A Full-Stack \nWeb-Developer.`,
       tagline: `Junior, Fresh, Entry-Level.`
     },
     fr: {
-      greeting: `Bonjour / Hi !`,
+      greeting: `Bonjour–Hi !`,
+      welcome: `Bienvenue à mon App Portfolio`,
       intro: `Je m'appelle`,
       name: `Hatem`,
       jobTitle: `Un développeur Web Full-Stack`,
@@ -25,13 +29,14 @@ export default function Home(props) {
     // ww = world wide // just as a template
     ww: {
       greeting: ``,
+      welcome: ``,
       intro: ``,
       name: ``,
       jobTitle: ``,
       tagline: ``
     }
   };
- 
+
 /*  
   // NO LONGER USEFUL, KEPT FOR REFERENCE ONLY
   useEffect(() => {
@@ -48,18 +53,51 @@ export default function Home(props) {
   }, [lang])
 
  */
+
   return (
 
-    <div  className='main-page home col-2' >
-      <div key={'home-'+lang}>
+    <div  className='main-page home' >
+      <div key={'home-'+lang} className='greet-card'>
+        <h1 className="greeting">
+        <Typewriter
+            onInit={ (Typewriter)=> {
+              Typewriter
+              .pauseFor(1000)
+              .start()
+              .changeDelay(50)
+              .typeString( 'Bonjour !')
+              .deleteAll(150)
+              .typeString( 'Hi!')
+              .deleteAll(150)
+              .typeString( homeMessage[lang].greeting )
+            }}
+            options={{
+              // strings: [ 'Bonjour !', 'Hi!','Boujour Hi !'],
+              cursor: "",
+              delay: 50,
+              deleteSpeed: 200,
+              autoStart: true,
+              loop: false,
+            }}
+          />
+        </h1>
 
         <h1 
           key={'home-greeting-'+lang}
           >
-          <div>{homeMessage[lang].greeting + " .. "}</div>
-          <div>{homeMessage[lang].intro} <span className='hatem'>{homeMessage[lang].name}</span></div>
+          {/* <div className='greeting'>{homeMessage[lang].greeting + "‥"}</div> */}
+          <div className='intro'>{homeMessage[lang].intro} </div>
+
+          <div className='name hatem'>
           
-          <div>{homeMessage[lang].jobTitle}</div>
+          {homeMessage[lang].name}
+              <HatemDeuxAllFace/>
+            
+          </div>
+
+
+          <div className='jobTitle' >{homeMessage[lang].jobTitle}</div>
+
         </h1>
 
         <p 
@@ -70,7 +108,7 @@ export default function Home(props) {
         </p>
 
       </div>
-      <HatemDeuxAllFace/>
+      {/* <div style={{height: '25vw'}}> <HatemDeuxAllFace/> </div> */}
     </div>
   )
 }
