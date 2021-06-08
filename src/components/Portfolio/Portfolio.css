@@ -97,6 +97,7 @@
   margin: 4%;
   text-align: center;
   line-height: unset;
+  overflow-y: scroll;
 }
 
 .card footer {
