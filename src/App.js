@@ -53,23 +53,27 @@ export default function App() {
 
         <Switch>
           
-          <Route exact path={`/about`} 
-            render={(props) => <About {...props} {...locale} 
+          <Route exact path={`/:${currentLanguage}/about`} 
+            render={(props) => <About {...props} {...locale} lang={currentLanguage}
             about={about} education={education} employment={employment}/>} />
           
-          <Route exact path='/Skills' 
+          <Route exact path={`/:${currentLanguage}/Skills`} 
             render={(props) => <Skills {...props} {...locale} 
             skills={skills} skillSet={skillSet}  />} />
           
-          <Route exact path='/Portfolio' 
+          <Route exact path={`/:${currentLanguage}/Portfolio`} 
             render={(props) => <Portfolio {...props} {...locale} 
             projectsData={projectsData}/>} />
           
-          <Route exact path='/Contacts' 
+          <Route exact path={`/:${currentLanguage}/Contacts`} 
             render={(props) => <Contacts {...props} {...locale} 
             contacts={contacts} /> } />
           
-          <Route exact path='/' 
+          <Route exact path={`/:${currentLanguage}/home`}
+            render={(props) => <Home {...props} {...locale} 
+            home={home} />} />
+
+          <Route exact path={`/:${currentLanguage}/`}
             render={(props) => <Home {...props} {...locale} 
             home={home} />} />
         </Switch>
