@@ -48,8 +48,8 @@ export default function ProjectsListItem(props) {
       <img 
         src={
           img_url[0] 
-          ? img_url[0] 
-          : "images/project-screenshots/no-image-available-icon.png"
+          ? '/' + img_url[0] 
+          : `/images/project-screenshots/no-image-available-icon.png`
         } 
         alt="Project_Screenshot"
       />
