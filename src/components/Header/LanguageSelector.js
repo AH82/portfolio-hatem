@@ -18,7 +18,8 @@ export default function LanguageSelector(props) {
 
   return (
     <button className={'lang-box ' + languageDisplay}  onClick={handleClick}>
-      {iconSelector(languageDisplay)} {languageDisplay.toUpperCase() }
+      <span>{iconSelector(languageDisplay)}</span>
+      <span>{languageDisplay.toUpperCase() }</span>
     </button>
   )
 }
