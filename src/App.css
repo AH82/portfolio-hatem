@@ -12,7 +12,7 @@
   margin: 
     var(--header-thickness) 
     1em
-    1em
+    0em
     calc(var(--header-thickness)*1.2);
   padding: 2%;
   padding-top: 0;
@@ -20,7 +20,7 @@
   overflow-y: auto;
   scroll-behavior: smooth;
   height: 100vh;
-  height: 90vh;
+  height: 88vh;
   /* animation: page-change 1s ease-in-out; */
 }
 
