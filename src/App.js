@@ -3,7 +3,7 @@
 import './App.css';
 
 /* libraries */
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 /* components */
 import Header from './components/Header/index';
 import Home   from './components/Home/index';
@@ -42,7 +42,7 @@ export default function App() {
   return (
     <div className="App">
 
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
 
         <Header       
         localeNavBtns={localeNavBtns}
@@ -74,7 +74,7 @@ export default function App() {
             home={home} />} />
         </Switch>
 
-      </BrowserRouter>
+      </Router>
 
 
     </div>
