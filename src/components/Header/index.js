@@ -1,3 +1,16 @@
+/**
+ * "react-responsive" is/was installed 
+ * to use ("useMediaQuery") hook 
+ * but eventually wasn't needed
+ * albeit might be needed for future implementation.
+
+ * Code kept for potential use in the future 
+ ** code pieces : 
+      import { useMediaQuery } from 'react-responsive'
+      const isPortrait = useMediaQuery({ orientation: 'portrait' })
+ */
+
+
 import './Header.css';
 
 import Logo from './Logo';
