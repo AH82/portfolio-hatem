@@ -4,6 +4,7 @@ import Logo from './Logo';
 import LanguageSelector from './LanguageSelector'
 import NavBar from './NavBar';
 import SocialMediaList from './SocialMediaList';
+import LogoMsg from './LogoMsg';
 
 export default function Header (props) {
   
