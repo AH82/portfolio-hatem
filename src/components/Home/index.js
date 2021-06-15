@@ -88,10 +88,10 @@ export default function Home(props) {
           {/* <div className='greeting'>{homeMessage[lang].greeting + "‥"}</div> */}
           <div className='intro'>{homeMessage[lang].intro} </div>
 
-          <div className='name hatem'>
+          <div className='name'>
           
-          {homeMessage[lang].name}
-              <HatemDeuxAllFace/>
+            <HatemDeuxAllFace/>
+           <div className='hatem'> {homeMessage[lang].name} </div>
             
           </div>
 

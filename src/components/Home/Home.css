@@ -1,21 +1,23 @@
 /* class .main-page{} is in App.css */
+
 .main-page.home {
   line-height: 1.12;
   text-align: left;
+
   width: 100vw;
   height: calc(100vh - (1% + var(--header-thickness)));
+
   display: flex;
   justify-content: space-around;
   align-self: center;
+
   animation: page-change-home 1s ease-in-out;
-  
 }
 
 .greet-card {
-  border-left : 2vw solid teal;
   padding-left: 4vw;
+  border-left : 2vw solid teal;
   border-radius: 1vw;
-  /* height: 80%; */
 }
 
 .greeting {
@@ -31,44 +33,48 @@
 }
 
 .name {
-  --size: 10vh;
+  --size: 8vh;
   font-size: var(--size);
   height: var(--size);
+
+  width: auto;
+  margin: 1% 0;
+  padding: 0 0 2% 2%;
+
   display: flex;
   flex-direction: row;
 }
 
-.jobTitle {
-  font-size: 2rem;
-}
-
-.tagline {
-  max-width: none;
-  font-family: 'Pacifico';
-  font-size: x-large;
-  animation: fade-in 1s linear 5s both;
+.name svg {
+  background-color: teal;
+  border-radius: 10px;
+  padding: 0 1%;
+  margin-right: 1%;
 }
 
 .hatem {
-  color: #2a9d8f;
-  font-family: 'Pacifico', cursive;
-  font-family: 'Satisfy', cursive;
-  font-family: fantasy;
-  font-weight: 400;
-  /* font-size: 3.5rem; */
+  /* color: #2a9d8f; */
+  color: #e9c46a;
+  background-color: teal;
+
+  font-family: 'exo';
+  font-style: italic;
+  font-weight: 700;
   text-transform: capitalize;
+
   border-radius: 10px;
-  padding: 5px;
+  padding: 0 3%;
+  
   transition: color 1s ease-in-out;
   /* animation: hatem 4s ease-in-out 500ms 2 ; */
- 
+  
 }
 
-.hatem:hover {
-  /* -webkit-animation: hatem 4s ease-in-out 500ms 2 ; */
+/* .hatem:hover {
+  -webkit-animation: hatem 4s ease-in-out 500ms 2 ;
   animation: hatem 10s none 0s infinite ;
-
-}
+  
+} */
 
 @keyframes hatem {
   /* 00% {color: #08fdd8;} */
@@ -78,7 +84,20 @@
   80% {color: #2a9d8f;}
   99% {color: #e76f51;}
   100% {color: #08fdd8;}
+  
+}
 
+.jobTitle {
+  font-size: 2rem;
+}
+
+.tagline {
+  max-width: none;
+
+  font-family: 'Pacifico';
+  font-size: x-large;
+  
+  animation: fade-in 1s linear 5s both;
 }
 
 @media only screen and (max-width: 385px) {
@@ -86,6 +105,6 @@
     padding-left: 1%;
   }
   .name {
-    --size: 7vh;
+    --size: 6.5vh;
   }
 }
