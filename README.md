@@ -39,24 +39,19 @@ This Website acts as :
 # Screenshots
 
 ## Home | Accueil
-<img src='./docs/screenshots/Screenshot_mobile_fr_1_home.jpg' height='400px'/>
-<img src='./docs/screenshots/Screenshot_1_home.png' height='400px'/>
+<img src='./docs/screenshots/Screenshot_mobile_fr_1_home.jpg' height='400px'/><img src='./docs/screenshots/Screenshot_1_home.png' height='400px'/>
 
 ## About | À Propos
-<img src='./docs/screenshots/Screenshot_mobile_fr_2_about.jpg' height='400px'/>
-<img src='./docs/screenshots/Screenshot_2_About.png' height='400px'/>
+<img src='./docs/screenshots/Screenshot_mobile_fr_2_about.jpg' height='400px'/><img src='./docs/screenshots/Screenshot_2_About.png' height='400px'/>
 
 ## Skills | Compétence
-<img src='./docs/screenshots/Screenshot_mobile_fr_3_skills.jpg' height='400px'/>
-<img src='./docs/screenshots/Screenshot_3_Skills.png' height='400px'/>
+<img src='./docs/screenshots/Screenshot_mobile_fr_3_skills.jpg' height='400px'/><img src='./docs/screenshots/Screenshot_3_Skills.png' height='400px'/>
 
 ## My Work (Projects) | Mon Travail (Projets)
-<img src='./docs/screenshots/Screenshot_mobile_fr_4_projects.jpg' height='400px'/>
-<img src='./docs/screenshots/Screenshot_4_projects.png' height='400px'/>
+<img src='./docs/screenshots/Screenshot_mobile_fr_4_projects.jpg' height='400px'/><img src='./docs/screenshots/Screenshot_4_projects.png' height='400px'/>
 
 ## Contact | Contact
-<img src='./docs/screenshots/Screenshot_mobile_fr_5_contact.jpg' height='400px'/>
-<img src='./docs/screenshots/Screenshot_5_contact.png' height='400px'/>
+<img src='./docs/screenshots/Screenshot_mobile_fr_5_contact.jpg' height='400px'/><img src='./docs/screenshots/Screenshot_5_contact.png' height='400px'/>
 
 
 
