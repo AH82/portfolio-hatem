@@ -6,105 +6,169 @@
 
   width: 100vw;
   height: calc(100vh - (1% + var(--header-thickness)));
+  height: calc(100vh - (var(--header-thickness)));
+  height: calc(100% - (var(--header-thickness)));
 
-  display: flex;
-  justify-content: space-around;
   align-self: center;
 
-  animation: page-change-home 1s ease-in-out;
-}
-
-.greet-card {
-  padding-left: 4vw;
-  border-left : 2vw solid teal;
-  border-radius: 1vw;
-}
-
-.greeting {
-  font-size: 2rem;  
-}
-
-.welcome {
-  font-size: 1.8rem;
-}
-
-.intro {
-  font-size: 1.5rem;  
-}
-
-.name {
-  --size: 8vh;
-  font-size: var(--size);
-  height: var(--size);
-
-  width: auto;
-  margin: 1% 0;
-  padding: 0 0 2% 2%;
-
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+
+  /* animation: page-change-home 1s ease-in-out; */
+
 }
 
-.name svg {
-  background-color: teal;
+.greet-card-container {
+  overflow: hidden;
+  display: flex;
+  align-self: center;
+}
+
+.greet-card-container article {
+  padding: 2%;
   border-radius: 10px;
-  padding: 0 1%;
-  margin-right: 1%;
+  margin: 2%;
 }
 
-.hatem {
-  /* color: #2a9d8f; */
-  color: #e9c46a;
-  background-color: teal;
-
-  font-family: 'exo';
-  font-style: italic;
-  font-weight: 700;
-  text-transform: capitalize;
-
+.greet-card-container article > svg {
+  /* background-color: cornflowerblue; */
   border-radius: 10px;
-  padding: 0 3%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Consider Deleting along with its HTML counterpart */
+.greet-card-container hr {
+  border: 3px solid teal;
+  border-radius: 2px;
+  /* margin: 5%; */
+  display: none;
+}
+
+.logo-bg{  /* content from deleted : .name svg {} */
+  background-color: teal;
+  background-color: rgb(0, 128, 128, 0.75);
+}
+
+.greeting-card-logo {
+  /* flex-grow: 1; */
+  animation: fade-in 1s linear 1s both;
+}
+
+.greeting-card-text {
+  /* "font-size" set for children's 'em' use */
+  font-size: 5vw;  
   
-  transition: color 1s ease-in-out;
-  /* animation: hatem 4s ease-in-out 500ms 2 ; */
+  flex-grow: 2;
+  border-bottom: 1px dotted  teal; /* Bottom border */
+}
+
+.greeting-card-text > * {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 5vw;
+  /* temp */   color: teal;
+  
+  /* Box model Reset to 0, to counter App's set defaults */
+  margin: 0;
+  padding: 0;
+  border: 0;
   
 }
 
-/* .hatem:hover {
-  -webkit-animation: hatem 4s ease-in-out 500ms 2 ;
-  animation: hatem 10s none 0s infinite ;
-  
-} */
 
-@keyframes hatem {
-  /* 00% {color: #08fdd8;} */
-  20% {color: #e9c46a ;}
-  40% {color: #264653;}
-  60% {color: #f4a261;}
-  80% {color: #2a9d8f;}
-  99% {color: #e76f51;}
-  100% {color: #08fdd8;}
-  
-}
+/*
+ * Specifics for .greeting-card-text individual children
+ */
+.greet-phrase     { font-size: 1em;  }
+.name-intro       { font-size: 0.5em;}
+.job-role-phrase  { font-size: 2rem; }
+.tagline          {
 
-.jobTitle {
-  font-size: 2rem;
-}
-
-.tagline {
   max-width: none;
+  padding: 3% 0 ;
 
   font-family: 'Pacifico';
   font-size: x-large;
   
-  animation: fade-in 1s linear 5s both;
+  animation: fade-in 1s linear 1s both;
 }
 
-@media only screen and (max-width: 385px) {
-  .greet-card {
-    padding-left: 1%;
+.name {
+  /* --size: 7.5vw;
+  font-size: var(--size);
+  height: var(--size); */
+  
+  font-size: 2em;
+  color: #e9c46a;
+  font-family: 'exo';
+  font-weight: 900;
+  text-transform: uppercase;
+
+  /* Dimentions and Box-Model */
+  width: auto;
+  margin: 1% 0;
+  padding: 0 0 2% 2%;
+  padding: 0 3%;
+  
+
+
+  /* VFX */
+  transition: color 1s ease-in-out;
+  /* animation: hatem 4s ease-in-out 500ms 2 ; */
+
+}
+
+/* .name:hover {
+  animation: rainbowText 0.25s infinite linear;
+} */
+
+@keyframes rainbowText {
+  0% { color: #E40303; } /* Red */
+  16.6% { color: #FF8C00; } /* Orange */
+  33.3% { color: #FFED00; } /* Yellow */
+  50% { color: #008026; } /* Green */
+  66.6% { color: #004DFF; } /* Blue */
+  83.3% { color: #750787; } /* Purple */
+  100% { color: #E40303; } /* Loop back to Red */
+}
+
+@media only screen and (max-width: 450px) {
+   /* was 385px */
+  .greet-card-container {
+    /* padding-left: 1%; */
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    scale: 95%;
   }
+  
   .name {
     --size: 6.5vh;
+  }
+  
+}
+
+@media only screen and (orientation: portrait) /* and (max-height: 1366px) */ {
+  .main-page.home {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .greet-card-container {
+    /* padding-left: 1%; */
+    display: flex;
+    flex-direction: column;
+    scale: 95%;
+  }
+
+  .greeting-card-logo {
+    width: 7.5vh;
+    /* height: 25vw; */
+    aspect-ratio: 1/1 ;
   }
 }

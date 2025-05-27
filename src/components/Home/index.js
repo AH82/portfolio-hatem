@@ -11,28 +11,32 @@ export default function Home(props) {
   // Data
   const homeMessage = {
     en: {
-      greeting: `Bonjour–Hi !`,
+      greetPhrase: `Bonjour–Hi !`,
       welcome: `Welcome to my Portfolio App!`,
-      intro: `I am`,
+      nameIntro: `It's`,
       name: `Hatem`,
-      jobTitle: `A Full-Stack \nWeb-Developer.`,
-      tagline: `Junior, Fresh, Entry-Level.`
+      jobRolePhrase: `Your Full-Stack \nWeb-Developer.`,
+      tagline: `Detail-Oriented, Resilient Problem-Solver, Critical Analytical Thinker.`
+      // tagline: `Junior, Fresh, Entry-Level.` /* previously */ 
     },
     fr: {
-      greeting: `Bonjour–Hi !`,
+      greetPhrase: `Bonjour–Hi !`,
       welcome: `Bienvenue à mon App Portfolio`,
-      intro: `Je m'appelle`,
+      nameIntro: `C'est`,
       name: `Hatem`,
-      jobTitle: `Un développeur Web Full-Stack`,
-      tagline: `Junior, Frais, Débutant.` // Débutant or Premier Échelon
+      jobRolePhrase: `Votre développeur Web Full-Stack`,
+      tagline: `Pensée Critique et Analytique, Résolveur de Problèmes Persévérant, Souci du Détail.` 
+      // tagline: `Junior, Frais, Débutant.` // Débutant or Premier Échelon /* previously */ 
+
+
     },
     // ww = world wide // just as a template
     ww: {
-      greeting: ``,
+      greetPhrase: ``,
       welcome: ``,
-      intro: ``,
+      nameIntro: ``,
       name: ``,
-      jobTitle: ``,
+      jobRolePhrase: ``,
       tagline: ``
     }
   };
@@ -57,8 +61,16 @@ export default function Home(props) {
   return (
 
     <div  className='main-page home' >
-      <div key={'home-'+lang} className='greet-card'>
-        <h1 className="greeting">
+      <section key={'home-'+lang} className='greet-card-container'>
+
+        <article className='greeting-card-logo logo-bg'>           
+          {/* Logo or Photo side */}
+          <HatemDeuxAllFace/> {/* Logo */}
+        </article>
+        <hr/>
+        <article className='greeting-card-text '>           
+          {/* Text or message side */}
+        <h1 className="greet-phrase">
         <Typewriter
             onInit={ (Typewriter)=> {
               Typewriter
@@ -66,15 +78,15 @@ export default function Home(props) {
               .start()
               .changeDelay(50)
               .typeString( 'Bonjour !')
-              .deleteAll(150)
+              .deleteAll(50)
               .typeString( 'Hi!')
-              .deleteAll(150)
-              .typeString( homeMessage[lang].greeting )
+              .deleteAll(50)
+              .typeString( homeMessage[lang].greetPhrase)
             }}
             options={{
               // strings: [ 'Bonjour !', 'Hi!','Boujour Hi !'],
               cursor: "",
-              delay: 50,
+              delay: 25,
               deleteSpeed: 200,
               autoStart: true,
               loop: false,
@@ -82,33 +94,18 @@ export default function Home(props) {
           />
         </h1>
 
-        <h1 
-          key={'home-greeting-'+lang}
-          >
-          {/* <div className='greeting'>{homeMessage[lang].greeting + "‥"}</div> */}
-          <div className='intro'>{homeMessage[lang].intro} </div>
-
-          <div className='name'>
-          
-            <HatemDeuxAllFace/>
-           <div className='hatem'> {homeMessage[lang].name} </div>
-            
-          </div>
-
-
-          <div className='jobTitle' >{homeMessage[lang].jobTitle}</div>
-
+        <h1 key={'home-greeting-'+lang} >
+          {/* <div className='greet-phrase'>{homeMessage[lang].greetPhrase + "‥"}</div> */}
+          <div className='name-intro'>{homeMessage[lang].nameIntro} </div>
+          <div className='name'>{homeMessage[lang].name} </div>
+          <div className='job-role-phrase' >{homeMessage[lang].jobRolePhrase}</div>
         </h1>
+        <p className='tagline' key={'tagline-'+lang}>{homeMessage[lang].tagline}</p>
+        </article>        
+      
 
-        <p 
-          key={'tagline-'+lang} 
-          className='tagline' 
-          >
-          {homeMessage[lang].tagline}
-        </p>
 
-      </div>
-      {/* <div style={{height: '25vw'}}> <HatemDeuxAllFace/> </div> */}
+      </section>
     </div>
   )
 }
