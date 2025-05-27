@@ -49,6 +49,7 @@ export default function HatemDeuxAllFace_svg(props) {
       viewBox="0 0 1516 2188" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      // preserveAspectRatio="xMidYMid meet"
     >
       <g filter="url(#filter0_i)">
         <ellipse cx="758.479" cy="1212.1" rx="747.02" ry="131.995" transform="rotate(1.13096 758.479 1212.1)" fill="#2A9D8F"/>
