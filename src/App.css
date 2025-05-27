@@ -4,6 +4,7 @@
   align-items: stretch;
   min-height: 100vh;
   background-color: var(--color-background);
+  background-image: url("background-images/swirl.png");
 }
 
 .main-page {
