@@ -1,0 +1,194 @@
+/*
+** Reminder **
+  @ src/index.css
+    :root {
+      --color-background: #1d1d1d;
+      --color-brand: #08fdd8;
+      --color-main: antiquewhite;
+      --color-nav: #181818; 
+      --header-thickness: 60px;
+    }
+*/
+
+.main-page.skills-page {
+  /* 
+    Reserved for any specific adjustment for the "Skills" page
+  */
+
+  /* background-color: blue; */
+  /* overflow-y: hidden; */
+}
+
+.skills-page-body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  gap: 10%;
+  /* background-color: brown; */
+
+  > * {
+    /* flex-basis: 40%; */
+    outline: 1px solid #9EFCFF ;
+    border-radius: 5px;
+
+  }
+}
+
+.skills-intro {
+  /* .skills-page-body > child=1 */
+
+  /* Temporarely Conceiling this Section, waiting for content update */
+  display: none;
+  /* visibility: hidden; */
+
+
+  min-width: 300px;
+  max-width: 30%;
+  /* width: 300px; */
+  /* width: max-content; */
+  /* min-width: 40vw; */
+  
+  /* flex-shrink: 3; */
+  /* flex-basis: 30vw; */
+  /* flex-basis: 35vw; */
+  
+  /* overflow-y: scroll; */
+  /* background-color: blueviolet; */
+}
+
+.skill-set-subpage {
+  /* 
+    This section has been temporarely diactivated, 
+    until the ".skill-intro" is re-displayed
+  */
+
+  /* max-width: 66vw; */
+  /* flex-basis: 66vw; */
+  
+  > * {
+    padding-left: 2rem;
+  }
+
+  &> h2 {
+    padding-bottom: 1rem;
+    background-color: var(--color-nav);
+    background-color: rgba(8, 253, 216, 0.1); /* this is --color-brand: #08fdd8 in rgba*/
+    border-radius: 10px 10px 0 0 ;
+    border-bottom: 1px solid rgba(8, 253, 216, 0.5); /* this is --color-brand: #08fdd8 in rgba*/
+
+
+  }
+}
+
+
+.skill-set-subpage-body {   /* .skills-page-body > child=2 */
+  /* flex-basis: 60%; */
+
+  display: flex;
+  /* align-items: stretch; */
+  flex-wrap: wrap;
+  /* overflow-y: scroll; */
+  /* overflow-x: hidden; */
+  /* margin: 2em; */
+  /* background-color: blueviolet; */
+  overflow-y: scroll;
+  height: 60vh;
+  height: calc(0.9 * (100vh - var(--header-thickness) - 8rem))
+
+}
+
+.skill-set__subset-group { 
+
+  margin: 5px;
+  padding: 5px;  
+  /* width: 10em; */
+  /* width: 12em; */
+  width: 15%;
+  width: 250px;
+  border-radius: 10px;
+  min-width: 200px;
+  min-width: 100px;
+  /* min-width: 375px; */
+  max-width: 400px;
+  
+  /* &:hover { /*temp
+    background-color: green;
+  } 
+  */
+  
+  > h3 {
+    /* color: blueviolet; */
+    height: 3em;
+    
+  }
+  
+  > ul {
+    /* color: aqua; */
+    
+  }
+}
+
+.display-bricks {
+  padding: 0px;
+  margin: 0px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  list-style-type: none;
+  /* list-style-type: "🟢"; */ /* can be a fun addition in the future*/
+  list-style-position: inside;
+  
+  
+  > li {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 3px;
+    
+    font-weight: 400;
+    color: #CFEFEF; /* very light teal closer to white */
+
+    &:hover {
+      cursor: default;
+    }
+    
+    &.solid, &.outline:hover {
+      background-color: var(--color-brand) ;
+      background-color: teal ;
+      color: var(--color-background);
+      color: #9EFCFF; /* Medium Light teal */
+      color: #CFEFEF; /* very light teal closer to white */
+      
+    }
+    &.outline, &.solid:hover {
+      border: 2px solid teal;
+      background-color: transparent;
+      color: #E9C46A;
+      color: #CFEFEF; /* very light teal closer to white */
+    }
+  }
+
+}
+
+@media only screen and (orientation: portrait) /* and (max-height: 1366px) */ {
+  .skills-page-body {
+    flex-direction: column;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  .skill-set__subset-group { 
+
+    /* margin: 5px; */
+    /* padding: 5px;   */
+    
+    min-width: 200px;
+    min-width: 90%;
+
+    
+  }
+}
