@@ -38,6 +38,7 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: italic;
   font-size: x-small;
+  font-weight: 900;
   color:  gold;
   text-align: center;
   background-color: teal;
@@ -49,6 +50,7 @@
 .logo-msg--animation-delay {
   animation-delay: 1.5s;
 }
+.logo-msg-1 { animation-delay: 0.0s; }
 .logo-msg-2 { animation-delay: 1.5s; }
 .logo-msg-3 { animation-delay: 3.0s; }
 

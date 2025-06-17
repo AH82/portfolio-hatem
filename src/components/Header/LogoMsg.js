@@ -11,7 +11,7 @@ const {
     <>
       {message1 && 
       <div 
-      className='logo-msg' 
+      className='logo-msg logo-msg-1' 
       >{message1}</div>}
       {message2 && 
       <div className='logo-msg logo-msg-2'>{message2}</div>}

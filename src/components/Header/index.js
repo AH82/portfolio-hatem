@@ -20,6 +20,8 @@ import SocialMediaList from './SocialMediaList';
 import LogoMsg from './LogoMsg';
 
 export default function Header (props) {
+
+  let displayHeaderLogoMessage = true;
   
   const { 
     localeNavBtns, 
@@ -32,13 +34,23 @@ export default function Header (props) {
     <header className='folio-header'>
       <div>
         <Logo/>
-        {true && <LogoMsg 
-          message1='beta' 
-          message2={
+        {displayHeaderLogoMessage && <LogoMsg 
+          // message1='New!'
+          message1={
             lang === 'fr' 
-            ? 'Travail en cours' 
-            : 'Work in progress'
+            ? 'Nouveau! v2.0.0' 
+            : 'New! v2.0.0'
             }
+            message2={
+              lang === 'fr' 
+              ? '# Disponible' 
+              : '# Open to Work'
+              }
+/*             message3={
+              lang === 'fr' 
+              ? 'v2.0.0' 
+              : 'v2.0.0'
+              } */
           />}
       </div>
       <LanguageSelector changeLanguage={changeLanguage}/>
