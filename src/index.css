@@ -18,6 +18,9 @@ font-family: 'Ubuntu', sans-serif;
 */
 
 * {
+  margin: 0;
+  padding: 0;
+
   /* Scroll bar for Firefox */
   scrollbar-width: auto;          /* "auto" or "thin" */
   scrollbar-color: rgba(0, 128, 128, 0.7) rgba(0, 128, 128, 0.15);   /* scroll thumb and track */
@@ -48,9 +51,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Martel', serif;
   /* width: 100%; */
   color: var(--color-brand);
+
+  padding: 0;
+  margin: 0;
+  border: 0;
+  padding-top: 1em;
 }
 
 h1 {
+  padding-top: 0;
   font-size: 2.5rem;
   animation: block-translate-right 750ms ease-in-out both;
 }
