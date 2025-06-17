@@ -39,6 +39,21 @@
 }
 
 
+/* .local-link */
+.main-page p a[href^='/#/']::before {
+  content: "📌";
+  display: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+
+.main-page p a[target="_blank"]::after {
+  content: "(🔗↗️)";
+  content: "↗️";
+}
 
 @keyframes page-change {
   0% {
