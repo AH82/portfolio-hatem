@@ -2,6 +2,18 @@ import React from 'react';
 
 import './About.css';
 
+/**
+ * Page Component rendering about me "this developer" & About this portfolio.
+ * this Component page is static as of 2025-06.
+ * 
+ * @component 
+ * @param {Object} props 
+ * @param {string} props.localePageHeadings - This page heading. 
+    - via {@link //src/hooks/useAppData.js} via {@link //src/locale/localePageHeadings.json}
+ * @param {string} props.lang - Language displayed in "en" or "fr".
+ * @param 
+ * Note: This component is intentionally hardcoded as the effort beyond that is found to be an overkill.
+ */
 export default function About(props) {
   const { localePageHeadings, /* about ,*/ lang } = props;
   
