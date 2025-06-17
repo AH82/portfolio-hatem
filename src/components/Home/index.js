@@ -100,7 +100,7 @@ export default function Home(props) {
           <div className='name'>{homeMessage[lang].name} </div>
           <div className='job-role-phrase' >{homeMessage[lang].jobRolePhrase}</div>
         </h1>
-        <p className='tagline' key={'tagline-'+lang}>{homeMessage[lang].tagline}</p>
+        <h2 className='tagline' key={'tagline-'+lang}> — {homeMessage[lang].tagline}</h2>
         </article>        
       
 
