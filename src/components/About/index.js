@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './About.css';
+
 export default function About(props) {
   const { localePageHeadings, about, lang } = props;
   
