@@ -4,7 +4,7 @@
     "about": "About",
     "skills": "Skills & Experience",
     "work": "My Work",
-    "projects": "projects",
+    "projects": "Projects",
     "contact": "Contact me"
   },
   "fr": {
@@ -18,10 +18,10 @@
   },
   "es": {
     "home": null,
-    "about": "acerca de mi",
-    "skills": "habilidades",
-    "work": "mi trabajo",
-    "projects": "proyectos",
-    "contact": "contáctame"
+    "about": "Acerca de mi",
+    "skills": "Habilidades",
+    "work": "Mi Trabajo",
+    "projects": "Proyectos",
+    "contact": "Contáctame"
   }
 }
