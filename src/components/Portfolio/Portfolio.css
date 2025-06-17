@@ -159,3 +159,7 @@
 .card a:active {
   text-decoration: underline;
 }
+
+.hide {
+  visibility: hidden;
+}

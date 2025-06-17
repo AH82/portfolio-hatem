@@ -80,7 +80,7 @@ export default function ProjectsListItem(props) {
 
       <footer>
 
-        <a href={repo_url} target='_blank' rel='noreferrer'>
+        <a href={repo_url} target='_blank' rel='noreferrer' className={!repo_url && 'hide'}>
           <IconContext.Provider 
             value={{ 
               style:{height: '75%',  paddingTop: '25%'},
@@ -92,7 +92,7 @@ export default function ProjectsListItem(props) {
         
         <StackList stack={stack}/>
         
-        <a href={website_url} target='_blank' rel='noreferrer'>
+        <a href={website_url} target='_blank' rel='noreferrer' className={!website_url && 'hide'} >
           <HiExternalLink/>
         </a>
 
