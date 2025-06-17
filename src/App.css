@@ -5,6 +5,10 @@
   min-height: 100vh;
   background-color: var(--color-background);
   background-image: url("background-images/swirl.png");
+  /* filter: opacity(0.5) grayscale(50%); */
+  background-blend-mode: screen;
+  backdrop-filter: blur(100px);
+
 }
 
 .main-page {
