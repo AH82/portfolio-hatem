@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio-hatem/static/css/main.4cbd7b95.chunk.css",
-    "main.js": "/portfolio-hatem/static/js/main.2ed7f0f9.chunk.js",
-    "main.js.map": "/portfolio-hatem/static/js/main.2ed7f0f9.chunk.js.map",
-    "runtime-main.js": "/portfolio-hatem/static/js/runtime-main.8d9b7ee3.js",
-    "runtime-main.js.map": "/portfolio-hatem/static/js/runtime-main.8d9b7ee3.js.map",
-    "static/js/2.8b7727a1.chunk.js": "/portfolio-hatem/static/js/2.8b7727a1.chunk.js",
-    "static/js/2.8b7727a1.chunk.js.map": "/portfolio-hatem/static/js/2.8b7727a1.chunk.js.map",
-    "static/js/3.b0fc5ef9.chunk.js": "/portfolio-hatem/static/js/3.b0fc5ef9.chunk.js",
-    "static/js/3.b0fc5ef9.chunk.js.map": "/portfolio-hatem/static/js/3.b0fc5ef9.chunk.js.map",
-    "index.html": "/portfolio-hatem/index.html",
-    "static/css/main.4cbd7b95.chunk.css.map": "/portfolio-hatem/static/css/main.4cbd7b95.chunk.css.map",
-    "static/js/2.8b7727a1.chunk.js.LICENSE.txt": "/portfolio-hatem/static/js/2.8b7727a1.chunk.js.LICENSE.txt",
-    "static/js/main.2ed7f0f9.chunk.js.LICENSE.txt": "/portfolio-hatem/static/js/main.2ed7f0f9.chunk.js.LICENSE.txt",
-    "static/media/Portfolio.css": "/portfolio-hatem/static/media/rocky-wall.eb057a9c.png"
+    "main.css": "/static/css/main.53f171a4.chunk.css",
+    "main.js": "/static/js/main.597658fe.chunk.js",
+    "main.js.map": "/static/js/main.597658fe.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.94c36e8e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.94c36e8e.js.map",
+    "static/js/2.8b7727a1.chunk.js": "/static/js/2.8b7727a1.chunk.js",
+    "static/js/2.8b7727a1.chunk.js.map": "/static/js/2.8b7727a1.chunk.js.map",
+    "static/js/3.b0fc5ef9.chunk.js": "/static/js/3.b0fc5ef9.chunk.js",
+    "static/js/3.b0fc5ef9.chunk.js.map": "/static/js/3.b0fc5ef9.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.53f171a4.chunk.css.map": "/static/css/main.53f171a4.chunk.css.map",
+    "static/js/2.8b7727a1.chunk.js.LICENSE.txt": "/static/js/2.8b7727a1.chunk.js.LICENSE.txt",
+    "static/js/main.597658fe.chunk.js.LICENSE.txt": "/static/js/main.597658fe.chunk.js.LICENSE.txt",
+    "static/media/Portfolio.css": "/static/media/rocky-wall.eb057a9c.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.8d9b7ee3.js",
+    "static/js/runtime-main.94c36e8e.js",
     "static/js/2.8b7727a1.chunk.js",
-    "static/css/main.4cbd7b95.chunk.css",
-    "static/js/main.2ed7f0f9.chunk.js"
+    "static/css/main.53f171a4.chunk.css",
+    "static/js/main.597658fe.chunk.js"
   ]
 }
